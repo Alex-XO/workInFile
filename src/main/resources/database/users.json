@@ -1,1 +1,22 @@
-[{"login" : "sss", "name" : "sss", "password" : "sss"}, {"login" : "ggg", "name" : "ggg", "password" : "ggg"}]
+[
+  {
+    "login": "sss",
+    "name": "eee",
+    "password": "sss"
+  },
+  {
+    "login": "ttt",
+    "name": "red",
+    "password": "ttt"
+  },
+  {
+    "login": "sss",
+    "name": "eee",
+    "password": "sss"
+  },
+  {
+    "login": "gb",
+    "name": "fds",
+    "password": "xv"
+  }
+]

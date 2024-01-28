@@ -1,5 +1,5 @@
 fun getTodoStatisticByUserId(userId: Int): Statistic {
-    val listToDo = allToDo()
+    val listToDo = allTodo()
         .filter { it.userId == userId }
     val completedList = listToDo
         .filter { it.completed }
@@ -10,7 +10,7 @@ fun getTodoStatisticByUserId(userId: Int): Statistic {
 }
 
 fun main() {
-    print("Введите userId для получения информации: ")
+    print("Enter userId to get information: ")
     val userId = readln().toInt()
     val user = allUsers()
         .find { it.id == userId }

@@ -12,16 +12,16 @@ fun getJsonWithHttp(url: String): HttpResponse<String> {
     val response = client.send(request, HttpResponse.BodyHandlers.ofString())
     return response
 }
-fun allToDo(): List<ToDo> {
-    val urlToDo = "https://jsonplaceholder.typicode.com/todos"
-    val response = getJsonWithHttp(urlToDo)
-    val listToDo = Klaxon()
-        .parseArray<ToDo>(response.body())
+fun allTodo(): List<Todo> {
+    val urlTodo = "https://jsonplaceholder.typicode.com/todos"
+    val response = getJsonWithHttp(urlTodo)
+    val listTodo = Klaxon()
+        .parseArray<Todo>(response.body())
 
-    if (listToDo == null) {
-        throw Exception("Пользователь не найден.")
+    if (listTodo == null) {
+        throw Exception("Not found.")
     }
-    return listToDo
+    return listTodo
 }
 
 fun allUsers(): List<User> {
@@ -31,7 +31,7 @@ fun allUsers(): List<User> {
         .parseArray<User>(response.body())
 
     if (listUsers == null) {
-        throw Exception("Пользователь не найден.")
+        throw Exception("Not found.")
     }
     return listUsers
 }

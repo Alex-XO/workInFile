@@ -1,3 +1,7 @@
+import api.user.userAdd
+import api.user.userDelete
+import api.user.userEdit
+import api.user.userGet
 import java.io.File
 import com.beust.klaxon.Klaxon
 
@@ -47,13 +51,23 @@ fun main() {
         .parseArray<Person>(file.readText())
 
     if (result == null) {
-        throw Exception("Пользователь не найден.")
+        throw Exception("File not found.")
     }
 
     val namePerson = result.map { person -> person.name }
 
-    filteredName(namePerson)
-    sortsNames(namePerson)
-    sortsObjects(result)
-    newFile(file, result)
+    print( "\n 1. Filtered Name" +
+            "\n 2. Sorts Names" +
+            "\n 3. Sorts Objects" +
+            "\n 4. New File" +
+            "\n Select an action: ")
+
+    val response = readln()
+
+    when (response) {
+        "1" -> filteredName(namePerson)
+        "2" -> sortsNames(namePerson)
+        "3" -> sortsObjects(result)
+        "4" -> newFile(file, result)
+    }
 }
