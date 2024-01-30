@@ -35,16 +35,33 @@ fun saveInFile(userList: List<User>, file: File) {
     file.writeText(result)
 }
 
+fun checkLogin(login: String,userList: List<User>): Boolean {
+    val user = userList.find { login == it.login }
+
+    if (user != null) {
+        println("A user with this login already exists.")
+        return false
+    }
+    else {
+        return true
+    }
+}
+
 fun userAdd(userList: List<User>, file: File) {
     print("Name: ")
     val name = readln()
+
     print("Login: ")
-    val login = readln()
+    var login = readln()
+    while (!checkLogin(login, userList)) {
+        print("Login: ")
+        login = readln()
+    }
+
     print("Password: ")
     val password = readln()
 
     val user = User(name, login, password)
-
     saveInFile(userList + user, file)
 }
 
