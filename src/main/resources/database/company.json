@@ -1,0 +1,27 @@
+[
+  {
+    "titleCompany": "BigCompany",
+    "users": [
+      {
+        "login": "Typak_1@gmail.com",
+        "name": "Typak",
+        "password": "nEtYrAk123"
+      },
+      {
+        "login": "KaznaKazaha@mail.kz",
+        "name": "Kazah",
+        "password": "KoNiNaFoReVer"
+      }
+    ]
+  },
+  {
+    "titleCompany": "CerBoss",
+    "users": [
+      {
+        "login": "BureKvass@gmail.com",
+        "name": "Burek",
+        "password": "cheBUREK"
+      }
+    ]
+  }
+]

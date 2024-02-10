@@ -1,1 +1,7 @@
-[{"login" : "sss", "name" : "eee", "password" : "sss"}, {"login" : "ttt", "name" : "red", "password" : "ttt"}, {"login" : "gb", "name" : "fds", "password" : "xv"}, {"login" : "ttt", "name" : "erf", "password" : "fsz"}, {"login" : "ttt", "name" : "rerd", "password" : "x"}, {"login" : "fff", "name" : "dcscx", "password" : "rgb"}, {"login" : "dxckksz", "name" : "cskkak", "password" : "dkjkkd"}]
+[
+  {
+    "login": "alex@mail.ru",
+    "name": "Alex",
+    "password": "badbed"
+  }
+]

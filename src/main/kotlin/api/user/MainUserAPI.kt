@@ -30,12 +30,12 @@ fun main() {
     }
 }
 
-fun saveInFile(userList: List<User>, file: File) {
-    val result = Klaxon().toJsonString(userList)
+fun saveInFile(anyList: List<Any>, file: File) {
+    val result = Klaxon().toJsonString(anyList)
     file.writeText(result)
 }
 
-fun checkLogin(login: String,userList: List<User>): Boolean {
+fun checkLogin(login: String, userList: List<User>): Boolean {
     val user = userList.find { login == it.login }
 
     if (user != null) {
@@ -47,7 +47,7 @@ fun checkLogin(login: String,userList: List<User>): Boolean {
     }
 }
 
-fun userAdd(userList: List<User>, file: File) {
+fun userAdd(userList: List<User>, file: File): User {
     print("Name: ")
     val name = readln()
 
@@ -63,6 +63,8 @@ fun userAdd(userList: List<User>, file: File) {
 
     val user = User(name, login, password)
     saveInFile(userList + user, file)
+
+    return user
 }
 
 fun userEdit(userList: List<User>, file: File) {
